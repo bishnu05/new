@@ -12,6 +12,6 @@ const box=document.createElement("div");
 const get=document.createElement("h2");
 get.innerText=getmovie.title;
 const img= document.createElement('img');
-img.src=url;
+img.src=Poster;
 box.append(get,img);
 document.querySelector('#movie').append(box);

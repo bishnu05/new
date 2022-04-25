@@ -7,7 +7,7 @@ let amount = localStorage.getItem("amount");
 let wallet = document.getElementById("wallet");
     wallet.innerText = amount;
 
- function value(id){
+ function update(id){
     return document.getElementById(id).value;
  }
 
@@ -16,7 +16,7 @@ let wallet = document.getElementById("wallet");
 
 async function moviesData(){ 
     movies_div.innerHTML = null;
-    let search = value("search") 
+    let search = update("search") 
     try{
         const url = `https://www.omdbapi.com/?s=${search}&apikey=a10f20b1`
         let res = await fetch(url);

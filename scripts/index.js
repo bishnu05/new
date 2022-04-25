@@ -2,7 +2,7 @@
 
 //const api = "https://www.omdbapi.com/?i=tt3896198&apikey=a10f20b1";
 
-function value(id){
+function update(id){
     return document.getElementById(id).value;
   }
   var amount = localStorage.getItem("amount")||0;
@@ -10,7 +10,7 @@ function value(id){
       wallet.innerText = amount;
       
   function addMoney(){
-      let inp = value("amount");
+      let inp = update("amount");
       amount = Number(amount) + Number(inp)
       wallet.innerText = amount;
       localStorage.setItem("amount",amount)
