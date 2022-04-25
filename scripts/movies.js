@@ -13,12 +13,12 @@ let wallet = document.getElementById("wallet");
 
  let id;
  let movies_div = document.getElementById("movies");
-const apikey =  `a10f20b1`;
+
 async function moviesData(){ 
     movies_div.innerHTML = null;
     let search = value("search") 
     try{
-        const url = `https://www.omdbapi.com/?s=${search}&apikey=${apikey}`
+        const url = `https://www.omdbapi.com/?s=${search}&apikey=a10f20b1`
         let res = await fetch(url);
         let data = await res.json();
         return data; 
