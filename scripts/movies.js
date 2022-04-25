@@ -3,9 +3,6 @@
 // so that you can retrive it on checkout.html page
 //const res = await fetch(`https://www.omdbapi.com/?apikey=a10f20b1&s=${q}`);
 
-// Implement debouncing for network request
-// On clicking book now store the selected movie in localstorage as key "movie"
-// so that you can retrive it on checkout.html page
 let amount = localStorage.getItem("amount");
 //console.log(amount);
 let wallet = document.getElementById("wallet");
@@ -25,14 +22,11 @@ async function moviesData(){
         const url = `https://www.omdbapi.com/?s=${search}&apikey=${apikey}`
         let res = await fetch(url);
         let data = await res.json();
-        return data;
-        
+        return data; 
     }
     catch(err){
         console.log(err);
     }
-    
-    
 }   
 function appendData(data){
  data.Search.forEach((el) => {
@@ -51,8 +45,6 @@ function appendData(data){
      btn.addEventListener("click",function(){
          bookMovie(el)
      })
-
-
      div.append(poster,title,btn)
      movies_div.append(div)
  });

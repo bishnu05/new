@@ -12,7 +12,6 @@ function value(id){
   function addMoney(){
       let inp = value("amount");
       amount = Number(amount) + Number(inp)
-      //console.log(amount)
       wallet.innerText = amount;
       localStorage.setItem("amount",amount)
   }
