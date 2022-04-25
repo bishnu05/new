@@ -4,7 +4,6 @@
 //const res = await fetch(`https://www.omdbapi.com/?apikey=a10f20b1&s=${q}`);
 
 let amount = localStorage.getItem("amount");
-//console.log(amount);
 let wallet = document.getElementById("wallet");
     wallet.innerText = amount;
 
@@ -30,7 +29,7 @@ async function moviesData(){
 }   
 function appendData(data){
  data.Search.forEach((el) => {
-     //console.log(el)
+    
      let div = document.createElement("div");
 
      let poster = document.createElement("img");
@@ -55,7 +54,7 @@ async function main(){
   if(data ===undefined){
       return false;
   }
- // console.log(data)
+ 
   appendData(data)
 }
 
